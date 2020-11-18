@@ -1,0 +1,32 @@
+//In this challenge, you are required to calculate and print the sum of the elements in an array, keeping in mind that some of those integers may be quite large.
+
+
+#include<stdio.h>
+
+long long int aVeryBigSum(int ar[],int arsize){
+long long int sum =0;
+int i;
+for(i=0;i<arsize;i++){
+
+    sum+=ar[i];
+}
+return sum;
+}
+
+int main()
+{
+    int arsize,i;
+
+    scanf("%d",&arsize);
+    if(arsize < 1 || arsize > 10){ exit(0); }
+    int ar[arsize];
+     long long int sum;
+     for(i = 0;i < arsize;i++){
+
+         scanf("%d",&ar[i]);if(ar[i] < 0 || ar[i] > pow(10,10)){ break; }
+     }
+
+      sum = aVeryBigSum(ar,arsize);
+      printf("%lld",sum);
+
+return 0; }

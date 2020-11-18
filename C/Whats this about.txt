@@ -1,0 +1,1 @@
+This folder contain the solution of the problem set on HACKERRANNK.The Solution are writtn in C language

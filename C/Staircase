@@ -1,0 +1,36 @@
+//https://www.hackerrank.com/challenges/staircase/problem
+
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+void hash(int n){
+    int space,s = 1,h = n - 1,hash;
+    int i;
+    int T = n;
+while(T--){
+    space = s;
+    for(;s < n;s++){
+        printf(" ");
+    }
+    hash = h;
+    for(;h < n;h++){
+        printf("#");
+    }
+
+    printf("\n");
+    h = hash - 1;
+    s = space + 1;
+}
+    return;
+}
+int main(){
+    int n;
+    scanf("%d",&n);
+    if(n <= 0||n > 100){
+        exit(0);
+    }
+    hash(n);
+
+    return 0;
+}
